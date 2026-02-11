@@ -1,1 +1,213 @@
-<h1>Website của Pegas Technology</h1>
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pegas Technology | Innovating Entertainment</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        /* --- CÀI ĐẶT CHUNG --- */
+        :root {
+            --primary-color: #6366f1; /* Tím xanh */
+            --secondary-color: #0ea5e9; /* Xanh dương sáng */
+            --bg-dark: #0f172a; /* Nền tối chính */
+            --bg-card: #1e293b; /* Nền thẻ tối hơn */
+            --text-light: #f8fafc;
+            --text-gray: #94a3b8;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 { font-family: 'Poppins', sans-serif; }
+        a { text-decoration: none; }
+
+        /* --- HERO SECTION (Phần đầu trang ấn tượng) --- */
+        .hero {
+            /* Tạo nền gradient chéo ấn tượng */
+            background: linear-gradient(135deg, #1e1b4b 0%, var(--bg-dark) 100%);
+            position: relative;
+            padding: 120px 20px;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        /* Hiệu ứng ánh sáng nền (Tech Glow) */
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(99,102,241,0.15) 0%, rgba(0,0,0,0) 70%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            /* Tạo chữ gradient */
+            background: linear-gradient(to right, var(--secondary-color), var(--primary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-gray);
+            margin-bottom: 30px;
+        }
+
+        /* Nút bấm hiện đại */
+        .btn-tech {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            color: white;
+            font-weight: 600;
+            border-radius: 30px;
+            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .btn-tech:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(99, 102, 241, 0.6);
+        }
+
+        /* --- SECTIONS CHUNG --- */
+        .section-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        /* --- ABOUT SECTION --- */
+        .about p {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            color: var(--text-gray);
+            font-size: 1.1rem;
+        }
+
+        /* --- APPS GRID SECTION (Quan trọng) --- */
+        .apps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .app-card {
+            background-color: var(--bg-card);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        /* Hiệu ứng hover vào thẻ ứng dụng */
+        .app-card:hover {
+            border-color: var(--primary-color);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        /* Placeholder cho icon ứng dụng */
+        .app-icon-placeholder {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+            border-radius: 15px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+        }
+
+        .app-card h3 { font-size: 1.5rem; margin-bottom: 10px; }
+        .app-card p { color: var(--text-gray); margin-bottom: 20px; }
+        
+        .app-link { color: var(--secondary-color); font-weight: 500; }
+
+        /* --- FOOTER --- */
+        footer {
+            background: #0b1120;
+            padding: 30px;
+            text-align: center;
+            color: var(--text-gray);
+            font-size: 0.9rem;
+            margin-top: 50px;
+        }
+
+        /* Responsive cho điện thoại */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .hero p { font-size: 1rem; }
+            .section-container { padding: 50px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Pegas Technology</h1>
+            <p>Định hình tương lai giải trí kỹ thuật số. Chúng tôi xây dựng các ứng dụng mang lại trải nghiệm người dùng vượt trội.</p>
+            <a href="#apps" class="btn-tech">Khám phá Ứng dụng</a>
+        </div>
+    </header>
+
+    <section class="section-container about">
+        <h2 class="section-title">Về Chúng Tôi</h2>
+        <p>Pegas Technology là một đội ngũ các nhà phát triển đam mê, tập trung vào việc tạo ra các giải pháp phần mềm hiện đại, đặc biệt trong lĩnh vực truyền phát nội dung số và tiện ích người dùng.</p>
+    </section>
+
+    <section id="apps" class="section-container">
+        <h2 class="section-title">Sản phẩm Nổi bật</h2>
+        <div class="apps-grid">
+            <div class="app-card">
+                <div class="app-icon-placeholder">▶️</div> <h3>IPTV Smart Player</h3>
+                <p>Trải nghiệm xem truyền hình trực tuyến mượt mà, thông minh với giao diện hiện đại và các tính năng quản lý danh sách phát mạnh mẽ.</p>
+                <a href="https://play.google.com/store/apps/details?id=com.pegas.iptv.smart" target="_blank" class="app-link">Xem trên Google Play →</a>
+            </div>
+
+            <div class="app-card">
+                <div class="app-icon-placeholder">🚀</div>
+                <h3>Future App Project</h3>
+                <p>Dự án tiếp theo đang được chúng tôi phát triển. Hãy đón chờ những đột phá mới về công nghệ tiện ích.</p>
+                <span class="app-link" style="color: var(--text-gray);">Coming Soon</span>
+            </div>
+             </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Pegas Technology. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
